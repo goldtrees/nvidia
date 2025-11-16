@@ -51,7 +51,7 @@ CUDA 12.x	>=525.60.13	>=527.41
 CUDA 11.x	>= 450.80.02*	>=452.39*
 
 
-### nvidia dirver install (autoinstall)
+### ~~nvidia dirver install (autoinstall)~~
 
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#driver-installation
 
@@ -116,10 +116,11 @@ https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target
 
 ```
 sudo vi /etc/modprobe.d/blacklist-nouveau.conf
-
-cat /etc/modprobe.d/blacklist-nouveau.conf
 blacklist nouveau
 options nouveau modeset=0
+
+
+cat /etc/modprobe.d/blacklist-nouveau.conf
 ```
 ```
 sudo update-initramfs -u
