@@ -1,14 +1,14 @@
 # 
 
-'''
+```
 $ sudo apt update
 $ sudo apt install build-essential -y
-'''
+```
 
 # NVIDIA Driver Install
  https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/ubuntu.html
 
-'''
+```
 $ distro=ubuntu2404
 
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/$distro/x86_64/cuda-keyring_1.1-1_all.deb
@@ -16,7 +16,7 @@ $ dpkg -i cuda-keyring_1.1-1_all.deb
 $ apt update
 
 $ apt install nvidia-open
-'''
+```
 
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
@@ -25,7 +25,7 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install
 
 https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
-'''
+```
 sudo apt-get update && sudo apt-get install -y --no-install-recommends \
    curl \
    gnupg2
@@ -43,7 +43,7 @@ export NVIDIA_CONTAINER_TOOLKIT_VERSION=1.18.0-1
       nvidia-container-toolkit-base=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
       libnvidia-container-tools=${NVIDIA_CONTAINER_TOOLKIT_VERSION} \
       libnvidia-container1=${NVIDIA_CONTAINER_TOOLKIT_VERSION}
-'''
+```
 
 # 
 https://www.yunseo.kim/ko/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/
@@ -52,7 +52,7 @@ https://www.yunseo.kim/ko/posts/how-to-build-a-deep-learning-development-environ
 
 # Podman Install
 
-'''
+```
 sudo apt install podman
 
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
@@ -62,10 +62,11 @@ INFO[0000] Found 3 CDI devices
 nvidia.com/gpu=0
 nvidia.com/gpu=GPU-115a17b8-4afe-668b-2566-f889012497db
 nvidia.com/gpu=all
-'''
+```
 
 # Test Sample workload
-'''
+
+```
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi
 
 Sun Nov 16 08:30:52 2025       
@@ -88,7 +89,7 @@ Sun Nov 16 08:30:52 2025
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-'''
+```
 
 # Tensoflow Install
 https://www.tensorflow.org/install/source?hl=ko#setup_for_linux_and_macos
