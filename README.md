@@ -1,3 +1,10 @@
+# System Requirements
+* OS : Ubuntu 22.04
+* GPU : NVIDIA® GeForce RTX™ 4050 Laptop GPU
+* CUDA Toolkit : 11.8
+* cuDNN : 8.6.0
+* Tensorflow : 2.13.0
+
 # Pre-installation
 
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions
