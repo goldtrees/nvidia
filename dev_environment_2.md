@@ -5,11 +5,11 @@
 * cuDNN : 9.3
 * Tensorflow : 2.18.0
 
-# Pre-installation
+## Pre-installation
 
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#pre-installation-actions
 
-### verify CUDA-capable GPU
+* verify CUDA-capable GPU
 ```
 lspci | grep -i nvidia
 01:00.0 3D controller: NVIDIA Corporation AD106M [GeForce RTX 4070 Max-Q / Mobile] (rev a1)
@@ -21,7 +21,7 @@ lspci | grep -i nvidia
 uname -m && cat /etc/*release
 ```
 
-### verify gcc installed
+* verify gcc installed
 ```
 gcc --version
 gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
@@ -37,7 +37,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 uname -r
 6.14.0-35-generic
 ```
-### NVIDIA Driver check
+* NVIDIA Driver check
 
 * CUDA 11 and Later Defaults to Minor Version Compatibility
 
@@ -55,7 +55,7 @@ https://www.tensorflow.org/install/source?hl=ko#gpu
 Version	Python version	Compiler	Build tools	cuDNN	CUDA
 > tensorflow-2.18.0	3.9-3.12	Clang 17.0.6	Bazel 6.5.0	9.3	12.5
 
-# CUDA Toolkit download and install (deb(network))
+## CUDA Toolkit download and install (deb(network))
 
 https://developer.nvidia.com/cuda-12-5-1-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=deb_network
 
@@ -66,7 +66,7 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-5
 ```
 
-# NVIDIA Driver install
+## NVIDIA Driver install
 
 ```
 sudo apt-get install -y nvidia-open
@@ -127,7 +127,7 @@ Cuda compilation tools, release 12.5, V12.5.82
 Build cuda_12.5.r12.5/compiler.34385749_0
 ```
 
-# cuDNN install
+## cuDNN install
 
 https://developer.nvidia.com/cudnn-9-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=24.04&target_type=deb_network
 
@@ -171,7 +171,7 @@ Test passed!
 
 ```
 
-# Tensorflow install
+## Tensorflow install
 
 Version	Python version	Compiler	Build tools	cuDNN	CUDA
 > tensorflow-2.18.0	3.9-3.12	Clang 17.0.6	Bazel 6.5.0	9.3	12.5
@@ -189,7 +189,7 @@ python3 -m venv tf
 source tf/bin/activate    
 ```
 
-### [GPU only] Virtual environment configuration
+#### [GPU only] Virtual environment configuration
 
 * Create symbolic links to NVIDIA shared libraries:
 ```
